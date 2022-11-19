@@ -1,17 +1,22 @@
 
+import React from 'react';
 import './App.css';
-// import Login from './pages/Login';
-// import MovieDetail from './pages/MovieDetail';
-// import Register from './pages/Register';
+import AuthContextProvider from './context/AuthContextProvider';
 import AppRouter from './router/AppRouter';
 
-function App() {
+
+const App = () => {
+
+
+
+
   return (
     <div >
-      <AppRouter />
-
+      <AuthContextProvider>
+        <AppRouter />
+      </AuthContextProvider>
     </div>
   );
-}
+};
 
 export default App;

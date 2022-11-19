@@ -54,7 +54,7 @@ export const createUser = async (email, password, navigate, displayName) => {
       email,
       password
     );
-    //? kullanıcı profilini güncellemek için kullanılan firebase metodu
+    //? kullanıcı profilini güncellemek için kullanılan firebase metodu.
     await updateProfile(auth.currentUser, {
       displayName: displayName,
     });
@@ -82,10 +82,12 @@ export const signIn = async (email, password, navigate) => {
 };
 
 export const userObserver = (setCurrentUser) => {
-  //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+  //! 👆oluşturmuş oldugum state i burada yakaladım artık user ım true ise setCurrentUser ı set et demeliyim.Ama bana sadece bana lazım olan verileri kullanırsam daha makul olacagından bana neler lazımsa onları yazıyorum.o yüzden ✨const { email, displayName, photoURL } = user;setCurrentUser({ email, displayName, photoURL });✨ şeklinde oluşturduk.
+
+  //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu.
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      const { email, displayName, photoURL } = user;
+      const { email, displayName, photoURL } = user; //!👈 dest.
       setCurrentUser({ email, displayName, photoURL });
       console.log(user);
     } else {
