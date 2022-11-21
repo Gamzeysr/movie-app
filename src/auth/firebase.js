@@ -38,6 +38,7 @@ const firebaseConfig = {
   messagingSenderId: "230325040889",
   appId: "1:230325040889:web:20a90245b4f11fa8ec9428"
 
+
 }
 
 
@@ -107,12 +108,16 @@ export const logOut = () => {
 //! Google ile girişi enable yap
 //* => Authentication => settings => Authorized domains => add domain
 //! Projeyi deploy ettikten sonra google sign-in çalışması için domain listesine deploy linkini ekle
+
+
 export const signUpWithGoogle = (navigate) => {
+  //! navigate i prop olarak gönderdik 
   const provider = new GoogleAuthProvider();
-  //? Açılır pencere ile giriş yapılması için kullanılan firebase metodu
+  //? 👇 Açılır pencere ile giriş yapılması için kullanılan firebase metodu.
   signInWithPopup(auth, provider)
     .then((result) => {
       // console.log(result);
+      //!👇Basarılı olursa sayfa bizi home a yönlendirecek.
       navigate("/");
       toastSuccessNotify("Logged in successfully!");
     })
