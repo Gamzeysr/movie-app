@@ -86,6 +86,7 @@ export const userObserver = (setCurrentUser) => {
   //! 👆oluşturmuş oldugum state i burada yakaladım artık user ım true ise setCurrentUser ı set et demeliyim.Ama bana sadece bana lazım olan verileri kullanırsam daha makul olacagından bana neler lazımsa onları yazıyorum.o yüzden ✨const { email, displayName, photoURL } = user;setCurrentUser({ email, displayName, photoURL });✨ şeklinde oluşturduk.
 
   //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu.
+  //* Yani burada kullanıcı login olursa email,display,photoURL yi görecek *//
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const { email, displayName, photoURL } = user; //!👈 dest.

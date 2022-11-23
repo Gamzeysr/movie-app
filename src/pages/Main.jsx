@@ -22,12 +22,15 @@ const Main = () => {
       .get(API)
       .then((res) => setMovies(res.data.results))
       //! 👆bu datamı atrık ben setMovies ımın içine atabilirim.çektiğim verimi ben değişkene ugrayan metoun içine atıyorum.
+      //! Artık bu atmış oldugum setMoviesin içindeki datamı kullanmak kalıyor geriye.Bir HTML yapısı içinde datayı kullancaz
       .catch((err) => console.log(err));
+    //! errorumu yakalamak için catch i kulllanıyorum 
   }
 
 
   return (
     <div className='flex justify-center flex-wrap'>
+      {/* ✨flex-wrap ✨  ile küçüldükçe büyüdükce sayfa taşmaları önlemek içn koyduk  */}
       {movies.map(movie => <MovieCard key={movie.id} {...movie} />)}
       {/* buradan cekip mapladığım veriyi çektiğim veriyi MovieCard ıma bastım .ekrana basacagım veriyi aynı sekilde basacagımdan ilk movies halinin alıp basıyorum */}
     </div>

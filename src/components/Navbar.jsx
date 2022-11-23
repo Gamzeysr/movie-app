@@ -7,7 +7,7 @@ import { AuthContext } from '../context/AuthContextProvider';
 
 const Navbar = () => {
     const { currentUser } = useContext(AuthContext)
-    //! Ben AuthContextProvider in içinde ki göndermiş oldugum degeri obje olrak gönderdiğimden buradada obje oldugunu baz alarak işlem yapıcam. yani AuthContext.Provider value={{currenUser}} seklinde olması obje oldugunu gösteriyor bize.Ve bu yüzden dest. yapıcam yani hangi contexti kullanacaksam onu dest yöntemi ile alıp kullanıcam simdi bit-r tane coıntextim var ama birden fazla olabilirdi.
+    //! Ben AuthContextProvider in içinde ki göndermiş oldugum degeri obje olrak gönderdiğimden buradada obje oldugunu baz alarak işlem yapıcam. yani AuthContext.Provider value={{currenUser}} seklinde olması obje oldugunu gösteriyor bize.Ve bu yüzden dest. yapıcam yani hangi contexti kullanacaksam onu dest yöntemi ile alıp kullanıcam simdi bir tane contextim var ama birden fazla olabilirdi.
     //!✨❤Artık dinamik olarak benim Navbarda user bilgim var 
     // const currentUser = { displayName: "gamze ysr" };
     // const currentUser = false;
