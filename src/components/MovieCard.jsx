@@ -29,13 +29,15 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
             <img
                 loading='lazy'
                 src={poster_path ? IMG_API + poster_path : defaultImage}
-                //!👆 burada poster_path varsa ımg_api ve poster_path i göster dedik eger yoksa defaultImage i göster dedik 
+                //!👆 burada poster_path varsa ımg_api ve poster_path i göster dedik eger yoksa defaultImage i göster dedik.
                 alt='movie-card'
             />
 
             <div className='flex align-baseline justify-between p-1 text-white'>
                 <h5>{title}</h5>
-                {currentUser && (<span className={`tag ${getVoteClass(vote_average)} `}>{vote_average}</span>)}
+                {currentUser && (<span className={`tag ${getVoteClass(vote_average)}`}>
+                    {vote_average.toFixed(1)}
+                </span>)}
                 {/*👆 burda currentUser true sa bana vote_average ı göster dedim.Yani currenUser dediğim sey kullanıcı giriş yaptıysa vote_average i göster demiş oluyorum. */}
                 {/*✨✨ Ben simdi bu tag dediğim yerin dinamik olmasını istiyorum ve dinamik olsun diye bi fonk tanımllıcam ve bu javascript fonk oldugundan buraya kazarkende süslü parantez içine yazıcam çünkü javascript metodunu jsx in içinde yazarken {} nün içine alarak yazıyoruz. */}
             </div>

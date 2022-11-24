@@ -41,7 +41,7 @@ const Navbar = () => {
                             >
                                 <img
                                     src={currentUser?.photoURL || avatar}
-                                    //! 👆 currentUser varsa bana photoURLL yi göster yoksa avatarı göter dedik 
+                                    //! 👆 currentUser varsa bana photoURLL yi göster yoksa avatarı göter dedik. 
                                     className="rounded-full"
                                     style={{ height: 25, width: 25 }}
                                     alt=""

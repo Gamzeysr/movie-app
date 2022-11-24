@@ -14,7 +14,7 @@ const AuthContextProvider = ({ children }) => {
 
     useEffect(() => {
         userObserver(setCurrentUser);
-        //! 👆 Bu methodu firebaseden cagırdık 
+        //* 👆 Bu methodu firebaseden cagırdık *//
     }, [])
 
 

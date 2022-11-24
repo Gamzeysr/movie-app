@@ -11,7 +11,7 @@ const App = () => {
 
 
   return (
-    <div >
+    <div className='bg-[#23242a]' >
       <AuthContextProvider>
         <AppRouter />
       </AuthContextProvider>
