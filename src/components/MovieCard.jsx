@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContextProvider';
 
 
@@ -11,6 +12,7 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
     const { currentUser } = useContext(AuthContext);
     //!👆 AuthContextini çağırdık burada bu sekilde 
     // console.log(title);
+    const navigate = useNavigate();
 
     const getVoteClass = (vote) => {
         if (vote >= 8) {
@@ -24,7 +26,11 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
     //!👆 Taglara dinamik olarak renk vermek için bu javascript fnknunu kullandık 
 
     return (
-        <div className='movie'
+        <div className='movie' onClick={() => {
+            navigate("details/" + id)
+            !currentUser && alert("please Login to see details");
+
+        }}
         >
             <img
                 loading='lazy'

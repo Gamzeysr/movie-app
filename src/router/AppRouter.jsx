@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MovieDetail from "../pages/MovieDetail";
 import Navbar from "../components/Navbar";
+import PrivateRouter from './PrivateRouter';
 
 const AppRouter = () => {
     return (
@@ -18,8 +19,11 @@ const AppRouter = () => {
                 <Route path="/login" element={<Login />} />
                 //!login se case im bana Login sayfasını render et dedik.
                 <Route path="/register" element={<Register />} />
-                <Route path="/details/:id" element={<MovieDetail />} />
-                {/* ☝ Burada dedim ki detailsden sonra ne gelirse gelsin bana MovieDetail imi cagırsın diyorum Ve bu yüzden path kısmı hep dinamik olacagından  :id mi kullanıyorum.  */}
+
+
+                <Route path="/details/:id" element={<PrivateRouter />}>
+                    <Route path="" element={<MovieDetail />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     )
