@@ -72,6 +72,7 @@ export const createUser = async (email, password, navigate, displayName) => {
 //* => Authentication => sign-in-method => enable Email/password
 //! Email/password ile girişi enable yap
 export const signIn = async (email, password, navigate) => {
+  console.log(email, password)
   try {
     await signInWithEmailAndPassword(auth, email, password);
     navigate("/");

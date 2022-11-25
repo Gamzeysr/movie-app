@@ -25,6 +25,9 @@ const Login = () => {
     signUpWithGoogle(navigate);
   };
 
+  const handleSignIn = () => {
+    signIn(email, password, navigate)
+  };
 
   return (
     <div className="flex justify-center">
@@ -79,20 +82,23 @@ const Login = () => {
                 className="links-a font-[0.75em] cursor-pointer decoration-none text-[#8f8f8f]"
                 onClick={() => forgotPassword(email)}
               >Forgot Password</span>
-              <Link
+              <button
                 className='links-a font-[0.75em] cursor-pointer decoraiton-none
-              text-[#8f8f8f]' to="/register">
+              text-[#8f8f8f]' to="/register"
+                onClick={() => handleSignIn()}>
                 Sign Up
 
-              </Link>
+              </button>
             </div>
 
 
-            <input
+            <button
               className="border-none outline-none bg-[#ff4b45] custom-input w-[100px] mt-[10px] rounded-[4px] font-[600] cursor-pointer"
-              type="submit"
+              type="button"
               value="Login"
-            />
+              onClick={() => handleSignIn()}
+            >Login</button>
+
             <button
               className="flex justify-between border-none outline-none bg-[#ff4b45] custom-input w-[300px] mt-[15px] rounded-[4px] font-[600] cursor-pointer"
               type="button"
