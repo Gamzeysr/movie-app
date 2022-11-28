@@ -1,3 +1,34 @@
+✨ https://movie-app-react-gamze.vercel.app/
+✨ Movie App (folder) <br>
+|
+|----readme.md         
+SOLUTION <br>
+├── public <br>
+│     └── index.html <br>
+├── src <br>
+│    ├── auth <br>
+│    │     └── firebase.js <br>
+│    ├── components <br>
+│    │     ├── MovieCard.js <br>
+│    │     └── Navbar.js <br>
+│    ├── context <br>
+│    │     └── AuthContext.js <br>
+│    ├── pages <br>
+│    │     ├── Login.js <br>
+│    │     ├── Register.js <br>
+│    │     ├── Main.js <br>
+│    │     └── MovieDetail.js <br>
+│    ├── router <br>
+│    │     └── Router.js <br>
+│    ├── App.js <br>
+│    ├── App.css <br>
+│    ├── index.js <br>
+│    └── index.css <br>
+├── package.json <br>
+├──
+└── yarn.lock <br>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
