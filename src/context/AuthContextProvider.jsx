@@ -9,7 +9,7 @@ const AuthContextProvider = ({ children }) => {
     //!2-👆burada AuthContextProvider adındaki componentimin tüm childlerini sarmalla diyorum.
     //! {children} bildiğimiz bir props Burada bu sekilde yazarak dest yapıp provider in aldtında doğrudan kullanıyoruz.
     const [currentUser, setCurrentUser] = useState(false)
-    //!👆4-Burada bir user stati olusturduk.Bunu firebase de ki kullanacak oldugum userObserver da bunu yakalıyorum
+    //!👆4-Burada bir user stati olusturduk.Bunu firebase de ki kullanacak oldugum userObserver metodunda da bunu yakalıyorum
 
 
     useEffect(() => {
